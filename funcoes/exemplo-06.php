@@ -1,8 +1,8 @@
 <?php
 
 $pessoa = array(
-    'nome' => 'João',
-    'idade' => '20'
+    'nome' => 'Felipe',
+    'idade' => 20
 );
 
 foreach ($pessoa as &$value) { // Usando & para referencia (altera variavel
