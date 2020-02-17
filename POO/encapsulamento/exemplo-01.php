@@ -20,7 +20,7 @@ $objeto = new Pessoa();
 
 // echo $objeto->nome . "<br/>"; // $nome é público
 // echo $objeto->idade . "<br/>"; // Não pode ser acessado por ser protegido. Apenas
-                                // quem está na mesma get_declared_classes
+                                // quem está na mesma classe
 // echo $objeto->senha . "<br/>"; // Não pode ser acessado nem por herdeiros
 $objeto->verDados();
 

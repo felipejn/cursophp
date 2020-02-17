@@ -4,7 +4,7 @@ class Pessoa {
 
     public $nome = "Rasmus Lerdorf";
     protected $idade = 48;
-    private $senha = "123456";
+    protected $senha = "123456";
 
     public function verDados() {
 
