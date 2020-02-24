@@ -57,13 +57,28 @@ class MostraCadastro extends Cadastro {
 
     }
 
+    public function jsonCadastro() {
+
+        $jsonCadastro = array(
+            'nome'=>$this->getNomeCompleto(),
+            'login'=>$this->getLogin(),
+            'password'=>$this->getPass()
+        );
+
+        return json_encode($jsonCadastro);
+
+    }
+
 }
 
 $novo = new MostraCadastro;
-$novo->setNomeCompleto("felipe NASCIMENTO"); // string sem tratamento
-$novo->setLogin("FELIPEJN@GMAIL.COM"); // string sem tratamento
+
+$novo->setNomeCompleto("LaRa takashima"); // string sem tratamento
+$novo->setLogin("scheilacsn@GMAIL.COM"); // string sem tratamento
 $novo->setPass("123456");
 
 $novo->verCadastro();
+
+echo $novo->jsonCadastro();
 
 ?>
