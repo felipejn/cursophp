@@ -6,7 +6,7 @@
         <style>
             body {
                 background-color: gray;
-                background-image: url("fundo.jpeg");
+                background-image: url("background.jpeg");
                 background-blend-mode: lighten;
             }
             .cadastro {
