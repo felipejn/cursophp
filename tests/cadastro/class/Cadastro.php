@@ -31,9 +31,18 @@ class Cadastro {
     public function setPass($pass) {
         $this->pass = $pass;
     }
-
+    // Recebe dados do formulário
+    public function getForm() {
+        if (isset($_POST['nome']) && isset($_POST['login']) && isset($_POST['pass']) && isset($_POST['pass2'])) {
+            $this->getCadastro($_POST['nome'],$_POST['login'],$_POST['pass'],$_POST['pass2']);
+        }
+        else {
+            echo "<p>Complete os campos para registrar um novo cadastro.</p>";
+        }
+    }
+    // Valida dados do formulário
     public function getCadastro($n,$l,$p,$p2) {
-
+        // Recebe Nome
         if (isset($n) && (!empty($n))) {
             $nome = $n;
         }
@@ -66,18 +75,16 @@ class Cadastro {
             $this->setNome($nome);
             $this->setLogin($login);
             $this->setPass($pass);
-            $this->novoCadastro();
-        } else {
-            echo "<p>Complete os campos para registrar um novo cliente.</p>";
+            $this->novoCadastro($nome,$login,$pass);
+        }
+        else {
+            echo "<p>Cadastro não realizado!</p>";
         }
     }
 
-    public function novoCadastro() {
+    public function novoCadastro($n,$l,$p) {
         $conn = new PDO("mysql: host=localhost;dbname=testes", "root", "root");
         $stmt = $conn->prepare("INSERT INTO cadastro (nome,login,pass) VALUES(:nome,:login,:pass)");
-        $n = $this->getNome();
-        $l = $this->getLogin();
-        $p = $this->getPass();
         $stmt->bindParam(":nome", $n);
         $stmt->bindParam(":login", $l);
         $stmt->bindParam(":pass", $p);
@@ -89,7 +96,6 @@ class Cadastro {
         echo "<strong>Email: </strong>".$this->getLogin()."<br/>";
         echo "<strong>Senha: </strong>".$this->getPass()."<br/>";
     }
-
 }
 
 ?>

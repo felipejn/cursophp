@@ -3,34 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Cadastro</title>
-        <style>
-            body {
-                background-color: gray;
-                background-image: url("background.jpeg");
-                background-blend-mode: lighten;
-            }
-
-            .cadastro {
-                font-family: arial;
-                position: relative;
-                top: 100px;
-                left: 430px;
-                background-color: lightblue;
-                width: 300px;
-                height: 350px;
-                padding: 10px;
-                border-style: solid;
-                border-width: 2px;
-                border-color: black;
-                border-radius: 10px;
-                text-align: center;
-            }
-
-            .btn:hover {
-                background-color: lightblue;
-                color: white;
-            }
-        </style>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
     <div class="cadastro">
@@ -55,6 +28,6 @@
 
 include_once("config.php");
 $cad = new Cadastro;
-$cad->getCadastro($_POST['nome'],$_POST['login'],$_POST['pass'],$_POST['pass2']);
+$cad->getForm();
 
 ?>
