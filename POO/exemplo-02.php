@@ -5,6 +5,7 @@ class Carro {
     private $modelo;
     private $motor;
     private $ano;
+    private $comb;
 
     public function getModelo() { // MODELO
 
@@ -42,12 +43,25 @@ class Carro {
 
     }
 
+    public function getComb() {
+
+        return $this->comb;
+
+    }
+
+    public function setComb($gilberto) {
+
+        $this->comb = $gilberto;
+
+    }
+
     public function exibir() {
 
         return array(
             "modelo"=>$this->getModelo(),
             "motor"=>$this->getMotor(),
-            "ano"=>$this->getAno()
+            "ano"=>$this->getAno(),
+            "combustível"=>$this->getComb()
         );
 
     }
@@ -57,7 +71,10 @@ $gol = new Carro();
 $gol->setModelo("Gol GT");
 $gol->setMotor("1.6");
 $gol->setAno("2017");
+$gol->setComb("Gasolina");
 
-var_dump($gol->exibir());
+$carro = json_encode($gol->exibir());
+
+print $carro;
 
 ?>
