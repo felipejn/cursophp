@@ -8,8 +8,8 @@ $login = "Jose";
 $password = "1234567890";
 
 // Ligar as variaveis login e pass com VALUES :LOGIN :PASS
-$stmt->bindParam(":LOGIN", $login);
-$stmt->bindParam(":PASSWORD", $password);
+$stmt->bindValue(":LOGIN", $login);
+$stmt->bindValue(":PASSWORD", $password);
 
 $stmt->execute();
 
