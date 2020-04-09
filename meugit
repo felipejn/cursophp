@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
+# Script Shell para fazer updates no Github
 clear
 echo "*** MEU GIT ***"
 echo
 echo "(1)git status"
 echo "(2)git add *"
+echo "(3)git commit \"mensagem\""
+echo "(4)git push origin master"
+echo "(5)Update completo"
 echo
 echo "Opção: "
 read menu
@@ -23,6 +27,44 @@ if [[ $menu == 2 ]]; then
     echo "git add * selecionado!"
     echo
     git add *
+    echo
+    echo "<Tecle qualquer tecla para sair>"
+    read
+fi
+
+if [[ $menu == 3 ]]; then
+    clear
+    echo "git commit \"mensagem\" selecionado!"
+    echo
+    echo "Mensagem do commit: "
+    read mensagem
+    git commit -m "$mensagem"
+    echo
+    echo "<Tecle qualquer tecla para sair>"
+    read
+fi
+
+if [[ $menu == 4 ]]; then
+    clear
+    echo "git push origin master selecionado!"
+    echo
+    git push origin master
+    echo
+    echo "<Tecle qualquer tecla para sair>"
+    read
+fi
+
+if [[ $menu == 5 ]]; then
+    clear
+    echo "Update completo selecionado!"
+    echo
+    echo "Mensagem do commit: "
+    read mensagem
+    git add *
+    echo
+    git commit -m "$mensagem"
+    echo
+    git push origin master
     echo
     echo "<Tecle qualquer tecla para sair>"
     read
