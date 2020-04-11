@@ -9,11 +9,11 @@ $gray = imagecolorallocate($image, 100, 100, 100);
 
 /* Define o que vai ser escrito usando agora TTF
 imagettftext($var, fontsize, angle, xpos, ypos, color, fontpath, string) */
-imagettftext($image, 32, 0, 320, 250, $titleColor, "fonts".DIRECTORY_SEPARATOR."Bevan".DIRECTORY_SEPARATOR.
-    "Bevan-Regular.ttf", "CERTIFICADO");
+imagettftext($image, 32, 0, 200, 250, $titleColor, "fonts".DIRECTORY_SEPARATOR."Bevan".DIRECTORY_SEPARATOR.
+    "Bevan-Regular.ttf", "Certificado de Conclusão");
 
-imagettftext($image, 32, 0, 375, 350, $titleColor, "fonts".DIRECTORY_SEPARATOR."Playball".DIRECTORY_SEPARATOR.
-    "Playball-Regular.ttf", "Divanei Aparecido");
+imagettftext($image, 32, 0, 300, 350, $titleColor, "fonts".DIRECTORY_SEPARATOR."Playball".DIRECTORY_SEPARATOR.
+    "Playball-Regular.ttf", "Felipe Jaime Nascimento");
 
 // utf8_decode() usada para exibir a palavra com acento
 imagestring($image, 3, 440, 370, utf8_decode("Concluído em ").date("d/m/Y"), $titleColor);

@@ -1,0 +1,15 @@
+{
+    "name": "felipejn/composer",
+    "description": "Curso de PHP7",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Felipe Nascimento",
+            "email": "felipejn@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
