@@ -1,0 +1,14 @@
+Procurar arquivo "httpd-vhosts.conf" na pasta apache/extra
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "/applications/mamp/htdocs/website/index.php"
+    ServerName local.cursophp7.com.br
+    ErrorLog "logs/dummy-host2.example.com-error_log"
+    CustomLog "logs/dummy-host2.example.com-access_log" common
+    <Directory "/applications/mamp/htdocs/website/index.php">
+        Order  allow, deny
+        Allow from all
+        Require all granted
+    </Directory>
+</VirtualHost>
