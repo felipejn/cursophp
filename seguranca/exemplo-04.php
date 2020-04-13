@@ -4,6 +4,6 @@
 	
 	<input type="email" name="inputEmail">
 	<button type="submit">Enviar</button>
-	<div class="g-recaptcha" data-sitekey="6Lc-zegUAAAAAHmH8sjbuFXbduydEczeix_W3WQg"></div>
+	<div class="g-recaptcha" data-sitekey="client key"></div>
 
 </form>
